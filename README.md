@@ -49,15 +49,30 @@ Este documento contiene una serie de ejercicios y preguntas relacionadas con la 
 
 Creo que la mejor opción sería la tercera alternativa (c) , especialmente para dispositivos que tienen muy poca memoria, como los que estamos considerando. Esta opción balancea bien el uso del tiempo y del espacio, algo crucial para gestionar los recursos de manera eficaz en aplicaciones de telemedicina, donde contar con un buen rendimiento y ser eficiente es vital.
 
- 2)	Explica las diferencias entre una tabla Hash y un árbol. ¿ Cuándo conviene utilizar cada una de estas estructuras? Justifique  su respuesta  y analice  todas  las posibles operaciones a realizar por las estructuras.  No redacte  el orden  tal y como puede ver en los apuntes, razónelo con sus propias palabras y argumentos.
+ 2)	**Explica las diferencias entre una tabla Hash y un árbol. ¿ Cuándo conviene utilizar cada una de estas estructuras? Justifique  su respuesta  y analice  todas  las posibles operaciones a realizar por las estructuras.  No redacte  el orden  tal y como puede ver en los apuntes, razónelo con sus propias palabras y argumentos.**
 
+Se usa una tabla hash para operaciones rápidas de búsqueda, inserción y eliminación cuando el orden no es importante. Opta por árboles cuando necesitas mantener los datos ordenados y realizar operaciones específicas como encontrar el mínimo o máximo.
 
+3)	**Explica las diferencias entre un a pila y una cola. ¿ Cuándo conviene utilizar cada una de estas estructuras? ¿ Cuál es el orden de complejidad computacional  de estas estructuras? No redacte el orden tal y como puede ver en los apuntes, razónelo con sus propias palabras y argumentos**
+
+Una pila usa el principio LIFO (Last In, First Out), perfecta para tareas que requieren acceso reciente primero, como deshacer acciones. Una cola sigue el esquema FIFO (First In, First Out), ideal para procesar elementos en el orden de llegada, como en filas de espera. Ambas estructuras permiten operaciones de añadir y eliminar en tiempo O(1).
+
+4)	**Explica	el	método	de	ordenación	denominado	inserción y describe las iteraciones sobre el siguiente conjunto de datos:**
+
+50 20 84 13 22 16 89 85: 
+
+Inicio: 50 (primer elemento, ya está en su lugar).
+Inserta 20: Se mueve antes de 50. Orden: 20 50
+Inserta 84: Va después de 50. Orden: 20 50 84
+Inserta 13: Se mueve al inicio. Orden: 13 20 50 84
+Inserta 22: Entra entre 20 y 50. Orden: 13 20 22 50 84
+Inserta 16: Entra entre 13 y 20. Orden: 13 16 20 22 50 84
+Inserta 89: Va al final. Orden: 13 16 20 22 50 84 89
+Inserta 85: Se coloca entre 84 y 89. Orden: 13 16 20 22 50 84 85 89
 
 ## Ejercicio 3
 
 Este ejercicio ha sido realizado y el código correspondiente junto a su explicación se encuentra en el repositorio.
-
-
 
 
 ## Ejercicio 4 
