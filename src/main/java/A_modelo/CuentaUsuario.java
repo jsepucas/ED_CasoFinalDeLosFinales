@@ -38,5 +38,15 @@ public class CuentaUsuario {
         return correoElectronico;
     }
 
+    public boolean yaSigueA(CuentaUsuario usuarioAseguir) {
+        return siguiendo.contains(usuarioAseguir);
+    }
+
+    public void seguir(CuentaUsuario usuarioAseguir) {
+    }
+
+    public void publicarTuit(Tuit nuevoTuit) {
+    }
+
     // Otros métodos...
 }
