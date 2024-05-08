@@ -30,23 +30,13 @@ public class CuentaUsuario {
         this.siguiendo = new HashSet<>();
     }
 
-    public void seguir(CuentaUsuario usuario) {
-        if (usuario != null && !this.siguiendo.contains(usuario)) {
-            this.siguiendo.add(usuario);
-            usuario.seguidores.add(this);
-        }
+    public String getAlias() {
+        return alias;
     }
 
-    public void publicarTuit(Tuit tuit) {
-        this.tuits.add(tuit);
-        this.seguidores.forEach(seguidor -> seguidor.lineaDeTiempo.add(tuit));
+    public String getEmail() {
+        return correoElectronico;
     }
 
-    @Override
-    public String toString() {
-        return "CuentaUsuario{" +
-                "alias='" + alias + '\'' +
-                ", correoElectronico='" + correoElectronico + '\'' +
-                '}';
-    }
+    // Otros métodos...
 }
