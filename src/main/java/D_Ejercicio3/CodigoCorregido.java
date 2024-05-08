@@ -14,7 +14,7 @@ public class CodigoCorregido {
         } else if (a == 0) {
             return 0;
         } else {
-            return a * recursive(a, b - 2);
+            return a * recursive(a, b - 1);
         }
     }
 }
