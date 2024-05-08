@@ -43,3 +43,44 @@ public class VentanaPrincipal extends JFrame {
         textAreaInfo = new JTextArea(10, 30);
         textAreaInfo.setEditable(false);
         JScrollPane scrollPane = new JScrollPane(textAreaInfo);
+
+        btnCrearUsuario.addActionListener(this::accionCrearUsuario);
+        btnSeguirUsuario.addActionListener(this::accionSeguirUsuario);
+        btnPublicarTuit.addActionListener(this::accionPublicarTuit);
+
+        panelCentral.add(new JLabel("Alias:"));
+        panelCentral.add(textFieldAlias);
+        panelCentral.add(new JLabel("Correo Electrónico:"));
+        panelCentral.add(textFieldCorreo);
+        panelCentral.add(new JLabel("Mensaje:"));
+        panelCentral.add(textFieldMensaje);
+        panelCentral.add(btnCrearUsuario);
+        panelCentral.add(btnSeguirUsuario);
+        panelCentral.add(btnPublicarTuit);
+
+        add(panelCentral, BorderLayout.CENTER);
+        add(scrollPane, BorderLayout.SOUTH);
+    }
+
+    private void accionCrearUsuario(ActionEvent e) {
+        String alias = textFieldAlias.getText();
+        String correo = textFieldCorreo.getText();
+        if (!alias.isEmpty() && !correo.isEmpty()) {
+            CuentaUsuario nuevoUsuario = new CuentaUsuario(alias, correo);
+            todosLosUsuarios.add(nuevoUsuario);
+            textAreaInfo.append("Usuario creado: " + nuevoUsuario + "\n");
+        } else {
+            JOptionPane.showMessageDialog(this, "Alias y correo son requeridos.", "Error", JOptionPane.ERROR_MESSAGE);
+        }
+    }
+
+    private void accionSeguirUsuario(ActionEvent e) {
+        // Implementación de seguir a otro usuario (simplificada para demostración)
+        // Aquí se debería permitir seleccionar a qué usuario seguir desde la lista de todosLosUsuarios
+    }
+
+    private void accionPublicarTuit(ActionEvent e) {
+        // Implementación de publicar un tuit (simplificada para demostración)
+        // Aquí se debería permitir escribir un mensaje y publicarlo como tuit
+    }
+}
