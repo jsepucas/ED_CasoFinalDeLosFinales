@@ -16,3 +16,12 @@ public class VentanaPrincipal extends JFrame {
         // Puedo añadir mas componentes
 
         initUIComponents();
+    }
+
+    private void initUIComponents() {
+        // Botones
+        JButton boton = new JButton("Haz clic aquí");
+        boton.addActionListener(e -> JOptionPane.showMessageDialog(this, "¡Botón presionado!"));
+        add(boton, BorderLayout.CENTER);
+    }
+}
