@@ -1,7 +1,7 @@
 package C_GUI;
 
-import modelo.CuentaUsuario;
-import modelo.Tuit;
+import A_modelo.CuentaUsuario;
+import A_modelo.Tuit;
 
 import javax.swing.*;
 import java.awt.*;
