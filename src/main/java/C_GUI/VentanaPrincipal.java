@@ -21,7 +21,7 @@ public class VentanaPrincipal extends JFrame {
     private JComboBox<CuentaUsuario> comboBoxUsuarios;
 
     public VentanaPrincipal() {
-        super("Simulación de Twitter UAX ");
+        super(" Twitter UAX ");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(800, 600);
         setLayout(new BorderLayout());
