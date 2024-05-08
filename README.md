@@ -23,7 +23,7 @@ Este documento contiene una serie de ejercicios y preguntas relacionadas con la 
 1. **En relación al estado de un objeto, para preservar el principio de encapsulación:**
     - a) Los atributos de nuestra clase deben permanecer públicos, para permitir un acceso total a la información que almacenamos en los objetos. Sin embargo, aquellos métodos que realicen operaciones internas (y no deban ser utilizados), deben establecerse como privados.
     - b) Debemos establecer la visibilidad más restrictiva (por ejemplo, privada) en los atributos de una clase. Así, cualquier software que utilice nuestro objeto, sólo accederá al estado de los objetos mediante los métodos que le hayamos permitido utilizar.
-    - **Respuesta: a**
+    - **Respuesta: b**
 
 2. **Los métodos de una clase no pueden devolver objetos:**
     - a) Verdadero
@@ -38,7 +38,7 @@ Este documento contiene una serie de ejercicios y preguntas relacionadas con la 
 4. **El tiempo de acceso a un dato en una lista de tipo LinkedList es en el mejor de los casos de:**
     - a) O(n)
     - b) O(1)
-    - **Respuesta: b**
+    - **Respuesta: a**
 
 5. **Un algoritmo de ordenación que implemente el método de inserción se basa en la idea de ir seleccionando el número correspondiente en la lista desordenada que se va a insertar en la posición última de la lista ordenada:**
     - a) Verdadero
@@ -79,4 +79,6 @@ Este diseño proporciona un sistema robusto y extensible que refleja las funcion
 ## Final
 
 Este proyecto contiene 6 carpetas nombradas alfabeticamente y una clase llamada 'MainGUI' en la cual se ejecuta el ejercicio 5. También contiene los ejercicios 3 y 4 los cuales estan hechos y detallados a base de comentarios donde se realiza la explicación adecuada de cada uno. 
+
+En cuanto al inicio de sesión, el programa esta realizado para que tanto cualquier usuario como cualquier contraseña sea valido para acceder al "Twitter UAX"
 
