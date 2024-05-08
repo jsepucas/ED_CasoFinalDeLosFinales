@@ -14,6 +14,7 @@ Este documento contiene una serie de ejercicios y preguntas relacionadas con la 
 - [Ejercicio 3](#ejercicio-3)
 - [Ejercicio 4](#ejercicio-4)
 - [Ejercicio 5](#ejercicio-5)
+- [Final](#final)
 
 ## Ejercicio 1
 
@@ -74,6 +75,8 @@ Herencia en clases Tweet: Utilizando herencia entre Tweet, DirectMessage, y Retw
 Este diseño proporciona un sistema robusto y extensible que refleja las funcionalidades básicas y estructuras de datos necesarias para simular un comportamiento similar al de Twitter.
 
 ----------------------------------------------------------------------------------------------------------------------------------
+
+## Final
 
 Este proyecto contiene 6 carpetas nombradas alfabeticamente y una clase llamada 'MainGUI' en la cual se ejecuta el ejercicio 5. También contiene los ejercicios 3 y 4 los cuales estan hechos y detallados a base de comentarios donde se realiza la explicación adecuada de cada uno. 
 
