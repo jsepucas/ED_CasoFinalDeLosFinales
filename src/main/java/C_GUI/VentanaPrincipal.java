@@ -16,13 +16,14 @@ public class VentanaPrincipal extends JFrame {
     private JTextArea textAreaInfo;
     private JTextField textFieldAlias, textFieldCorreo, textFieldMensaje;
     private JButton btnCrearUsuario, btnSeguirUsuario, btnPublicarTuit;
+    private JComboBox<CuentaUsuario> comboBoxUsuarios;
 
     public VentanaPrincipal() {
         super("Simulación de Twitter");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(800, 600);
         setLayout(new BorderLayout());
-        setLocationRelativeTo(null);  // Centrar la ventana en la pantalla
+        setLocationRelativeTo(null);
 
         todosLosUsuarios = new ArrayList<>();
         initUIComponents();
@@ -30,7 +31,7 @@ public class VentanaPrincipal extends JFrame {
 
     private void initUIComponents() {
         JPanel panelCentral = new JPanel();
-        panelCentral.setLayout(new GridLayout(5, 2, 10, 10)); // Grid layout para ordenar los componentes.
+        panelCentral.setLayout(new GridLayout(6, 2, 10, 10)); // Grid layout para ordenar los componentes.
 
         textFieldAlias = new JTextField();
         textFieldCorreo = new JTextField();
@@ -39,6 +40,10 @@ public class VentanaPrincipal extends JFrame {
         btnCrearUsuario = new JButton("Crear Usuario");
         btnSeguirUsuario = new JButton("Seguir Usuario");
         btnPublicarTuit = new JButton("Publicar Tuit");
+
+        comboBoxUsuarios = new JComboBox<>();
+        comboBoxUsuarios.setModel(new DefaultComboBoxModel<>(todosLosUsuarios.toArray(new CuentaUsuario[0])));
+        comboBoxUsuarios.addActionListener(e -> usuarioActual = (CuentaUsuario) comboBoxUsuarios.getSelectedItem());
 
         textAreaInfo = new JTextArea(10, 30);
         textAreaInfo.setEditable(false);
@@ -57,6 +62,8 @@ public class VentanaPrincipal extends JFrame {
         panelCentral.add(btnCrearUsuario);
         panelCentral.add(btnSeguirUsuario);
         panelCentral.add(btnPublicarTuit);
+        panelCentral.add(new JLabel("Seleccionar Usuario:"));
+        panelCentral.add(comboBoxUsuarios);
 
         add(panelCentral, BorderLayout.CENTER);
         add(scrollPane, BorderLayout.SOUTH);
@@ -68,6 +75,7 @@ public class VentanaPrincipal extends JFrame {
         if (!alias.isEmpty() && !correo.isEmpty()) {
             CuentaUsuario nuevoUsuario = new CuentaUsuario(alias, correo);
             todosLosUsuarios.add(nuevoUsuario);
+            comboBoxUsuarios.addItem(nuevoUsuario);
             textAreaInfo.append("Usuario creado: " + nuevoUsuario + "\n");
         } else {
             JOptionPane.showMessageDialog(this, "Alias y correo son requeridos.", "Error", JOptionPane.ERROR_MESSAGE);
@@ -75,12 +83,23 @@ public class VentanaPrincipal extends JFrame {
     }
 
     private void accionSeguirUsuario(ActionEvent e) {
-        // Implementación de seguir a otro usuario (simplificada para demostración)
-        // Aquí se debería permitir seleccionar a qué usuario seguir desde la lista de todosLosUsuarios
+        CuentaUsuario usuarioAseguir = (CuentaUsuario) comboBoxUsuarios.getSelectedItem();
+        if (usuarioActual != null && usuarioAseguir != null && usuarioActual != usuarioAseguir && !usuarioActual.yaSigueA(usuarioAseguir)) {
+            usuarioActual.seguir(usuarioAseguir);
+            textAreaInfo.append("Ahora sigues a: " + usuarioAseguir.getAlias() + "\n");
+        } else {
+            JOptionPane.showMessageDialog(this, "Error al seguir usuario.", "Error", JOptionPane.ERROR_MESSAGE);
+        }
     }
 
     private void accionPublicarTuit(ActionEvent e) {
-        // Implementación de publicar un tuit (simplificada para demostración)
-        // Aquí se debería permitir escribir un mensaje y publicarlo como tuit
+        String mensaje = textFieldMensaje.getText();
+        if (usuarioActual != null && !mensaje.isEmpty() && mensaje.length() <= 140) {
+            Tuit nuevoTuit = new Tuit(mensaje, usuarioActual);
+            usuarioActual.publicarTuit(nuevoTuit);
+            textAreaInfo.append("Tuit publicado: " + nuevoTuit + "\n");
+        } else {
+            JOptionPane.showMessageDialog(this, "Error: El mensaje no puede estar vacío y debe ser menor a 140 caracteres.", "Error de Tweet", JOptionPane.ERROR_MESSAGE);
+        }
     }
 }
