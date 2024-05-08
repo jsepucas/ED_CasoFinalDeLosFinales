@@ -26,6 +26,20 @@ public class VentanaPrincipal extends JFrame {
 
         todosLosUsuarios = new ArrayList<>();
         initUIComponents();
-
-        
     }
+
+    private void initUIComponents() {
+        JPanel panelCentral = new JPanel();
+        panelCentral.setLayout(new GridLayout(5, 2, 10, 10)); // Grid layout para ordenar los componentes.
+
+        textFieldAlias = new JTextField();
+        textFieldCorreo = new JTextField();
+        textFieldMensaje = new JTextField();
+
+        btnCrearUsuario = new JButton("Crear Usuario");
+        btnSeguirUsuario = new JButton("Seguir Usuario");
+        btnPublicarTuit = new JButton("Publicar Tuit");
+
+        textAreaInfo = new JTextArea(10, 30);
+        textAreaInfo.setEditable(false);
+        JScrollPane scrollPane = new JScrollPane(textAreaInfo);
