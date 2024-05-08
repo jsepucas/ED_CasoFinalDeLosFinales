@@ -61,9 +61,9 @@ public class VentanaPrincipal extends JFrame {
         textFieldMensaje = new JTextField();
         JLabel labelCaracteresRestantes = new JLabel("Caracteres restantes: 140");
 
-        btnCrearUsuario = new JButton("Crear Usuario");
-        btnSeguirUsuario = new JButton("Seguir Usuario");
-        btnPublicarTuit = new JButton("Publicar Tuit");
+        btnCrearUsuario = new JButton("Crear Usuario \uD83D\uDC64");
+        btnSeguirUsuario = new JButton("Seguir Usuario \uD83D\uDC64");
+        btnPublicarTuit = new JButton("Publicar Tuit \uD83D\uDCDD");
 
         comboBoxUsuarios = new JComboBox<>();
         comboBoxUsuarios.setModel(new DefaultComboBoxModel<>(todosLosUsuarios.toArray(new CuentaUsuario[0])));
@@ -88,16 +88,16 @@ public class VentanaPrincipal extends JFrame {
             }
         });
 
-        panelCentral.add(new JLabel("Alias:"));
+        panelCentral.add(new JLabel("Alias  \uD83D\uDC64 :"));
         panelCentral.add(textFieldAlias);
-        panelCentral.add(new JLabel("Correo Electrónico:"));
+        panelCentral.add(new JLabel("Correo Electrónico (@) :"));
         panelCentral.add(textFieldCorreo);
-        panelCentral.add(new JLabel("Mensaje:"));
+        panelCentral.add(new JLabel("Mensaje \uD83D\uDCDD :"));
         panelCentral.add(textFieldMensaje);
         panelCentral.add(btnCrearUsuario);
         panelCentral.add(btnSeguirUsuario);
         panelCentral.add(btnPublicarTuit);
-        panelCentral.add(new JLabel("Seleccionar Usuario:"));
+        panelCentral.add(new JLabel("Seleccionar Usuario \uD83D\uDC64:"));
         panelCentral.add(comboBoxUsuarios);
         panelCentral.add(labelCaracteresRestantes);
 
