@@ -49,6 +49,10 @@ Este documento contiene una serie de ejercicios y preguntas relacionadas con la 
 
 Creo que la mejor opción sería la tercera alternativa (c) , especialmente para dispositivos que tienen muy poca memoria, como los que estamos considerando. Esta opción balancea bien el uso del tiempo y del espacio, algo crucial para gestionar los recursos de manera eficaz en aplicaciones de telemedicina, donde contar con un buen rendimiento y ser eficiente es vital.
 
+ 2)	Explica las diferencias entre una tabla Hash y un árbol. ¿ Cuándo conviene utilizar cada una de estas estructuras? Justifique  su respuesta  y analice  todas  las posibles operaciones a realizar por las estructuras.  No redacte  el orden  tal y como puede ver en los apuntes, razónelo con sus propias palabras y argumentos.
+
+
+
 ## Ejercicio 3
 
 Este ejercicio ha sido realizado y el código correspondiente junto a su explicación se encuentra en el repositorio.
