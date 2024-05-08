@@ -8,3 +8,5 @@ public class MensajeDirecto extends Tuit {
         this.receptor = receptor;
     }
 }
+
+
