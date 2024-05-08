@@ -108,7 +108,7 @@ public class LoginWindow extends JFrame implements ActionListener {
             c.gridy++;
             panelCentral.add(labelLogo, c);
         } else {
-            System.err.println("No se pudo cargar el logo de la empresa");
+            System.err.println("No se pudo cargar el logo de la empresaa");
         }
         // Añade el panel al fondo
         this.add(panelCentral, BorderLayout.CENTER);
