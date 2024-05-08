@@ -15,7 +15,7 @@ public class LoginWindow extends JFrame implements ActionListener {
     private JButton botonIniciarSesion;
 
     public LoginWindow() {
-        super("Inicio de Sesión");
+        super("Inicio de Sesión Twitter UAX \uD83D\uDC24");
         this.setLayout(new BorderLayout());
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setSize(800, 500); // Ajusta el tamaño de la ventana
@@ -62,10 +62,10 @@ public class LoginWindow extends JFrame implements ActionListener {
         }
 
         // Configura los campos de texto y etiquetas
-        JLabel etiquetaUsuario = new JLabel("Usuario:");
+        JLabel etiquetaUsuario = new JLabel("Usuario \uD83D\uDC26 :");
         etiquetaUsuario.setForeground(Color.WHITE); // Texto blanco
         textFieldUsuario = new JTextField(20);
-        JLabel etiquetaContraseña = new JLabel("Contraseña:");
+        JLabel etiquetaContraseña = new JLabel("Contraseña \uD83D\uDC26 :");
         etiquetaContraseña.setForeground(Color.WHITE); // Texto blanco
         passwordField = new JPasswordField(20);
         passwordField.addKeyListener(new KeyAdapter() {
@@ -87,7 +87,7 @@ public class LoginWindow extends JFrame implements ActionListener {
         panelCentral.add(passwordField, c);
 
         // Botón de inicio de sesión
-        botonIniciarSesion = new JButton("Iniciar Sesión");
+        botonIniciarSesion = new JButton("Iniciar Sesión \uD83D\uDC64");
         botonIniciarSesion.setBackground(new Color(8, 112, 243)); // Color personalizado
         botonIniciarSesion.setForeground(Color.WHITE);
         c.gridy++;
