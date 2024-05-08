@@ -54,7 +54,7 @@ public class VentanaPrincipal extends JFrame {
 
     private void initUIComponents() {
         JPanel panelCentral = new JPanel();
-        panelCentral.setLayout(new GridLayout(6, 2, 10, 10)); // Grid layout para ordenar los componentes.
+        panelCentral.setLayout(new GridLayout(6, 2, 10, 10));
 
         textFieldAlias = new JTextField();
         textFieldCorreo = new JTextField();
