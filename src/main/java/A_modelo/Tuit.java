@@ -9,11 +9,12 @@ public class Tuit {
     protected CuentaUsuario sender;
     protected LocalDate time;
 
-    public Tuit(String message, CuentaUsuario sender, long momento) {
+    public Tuit(String message, CuentaUsuario sender) {
         if (message.length() > 140)
             throw new IllegalArgumentException("Message exceeds 140 characters");
         this.message = message;
         this.sender = sender;
+        long momento = 0;
         this.time = Instant.ofEpochMilli(momento).atZone(ZoneId.systemDefault()).toLocalDate();
     }
 
