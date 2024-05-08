@@ -4,7 +4,7 @@ public class Retuit extends Tuit {
     private Tuit tuitOriginal;
 
     public Retuit(Tuit tuitOriginal, CuentaUsuario emisor, long momento) {
-        super(tuitOriginal.mensaje, emisor, momento);
+        super(tuitOriginal.message, emisor, momento);
         this.tuitOriginal = tuitOriginal;
     }
 }
