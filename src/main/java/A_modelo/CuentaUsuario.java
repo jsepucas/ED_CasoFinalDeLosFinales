@@ -1,5 +1,7 @@
 package A_modelo;
 
+import B_utilidades.Utilidades;
+
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
@@ -34,3 +36,17 @@ public class CuentaUsuario {
             usuario.seguidores.add(this);
         }
     }
+
+    public void publicarTuit(Tuit tuit) {
+        this.tuits.add(tuit);
+        this.seguidores.forEach(seguidor -> seguidor.lineaDeTiempo.add(tuit));
+    }
+
+    @Override
+    public String toString() {
+        return "CuentaUsuario{" +
+                "alias='" + alias + '\'' +
+                ", correoElectronico='" + correoElectronico + '\'' +
+                '}';
+    }
+}
