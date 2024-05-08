@@ -1,27 +1,14 @@
 package C_GUI;
 
-
+import modelo.CuentaUsuario;
+import modelo.Tuit;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.util.ArrayList;
+import java.util.List;
 
 public class VentanaPrincipal extends JFrame {
-    public VentanaPrincipal() {
-        super("Simulación de Twitter");
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(600, 400);
-        setLayout(new BorderLayout());
-        setLocationRelativeTo(null);  // Pantalla en centro
-
-        // Puedo añadir mas componentes
-
-        initUIComponents();
-    }
-
-    private void initUIComponents() {
-        // Botones
-        JButton boton = new JButton("Haz clic aquí");
-        boton.addActionListener(e -> JOptionPane.showMessageDialog(this, "¡Botón presionado!"));
-        add(boton, BorderLayout.CENTER);
-    }
-}
+    private CuentaUsuario usuarioActual;
+    private List<CuentaUsuario> todosLosUsuarios;
