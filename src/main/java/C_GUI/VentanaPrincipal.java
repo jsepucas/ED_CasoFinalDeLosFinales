@@ -6,6 +6,8 @@ import A_modelo.Tuit;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,7 +21,7 @@ public class VentanaPrincipal extends JFrame {
     private JComboBox<CuentaUsuario> comboBoxUsuarios;
 
     public VentanaPrincipal() {
-        super("Simulación de Twitter");
+        super("Simulación de Twitter UAX ");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(800, 600);
         setLayout(new BorderLayout());
@@ -36,6 +38,7 @@ public class VentanaPrincipal extends JFrame {
         textFieldAlias = new JTextField();
         textFieldCorreo = new JTextField();
         textFieldMensaje = new JTextField();
+        JLabel labelCaracteresRestantes = new JLabel("Caracteres restantes: 140");
 
         btnCrearUsuario = new JButton("Crear Usuario");
         btnSeguirUsuario = new JButton("Seguir Usuario");
@@ -53,6 +56,17 @@ public class VentanaPrincipal extends JFrame {
         btnSeguirUsuario.addActionListener(this::accionSeguirUsuario);
         btnPublicarTuit.addActionListener(this::accionPublicarTuit);
 
+        textFieldMensaje.addKeyListener(new KeyAdapter() {
+            public void keyReleased(KeyEvent e) {
+                int maxLength = 140;
+                int length = textFieldMensaje.getText().length();
+                labelCaracteresRestantes.setText("Caracteres restantes: " + (maxLength - length));
+                if (length > maxLength) {
+                    textFieldMensaje.setText(textFieldMensaje.getText().substring(0, maxLength));
+                }
+            }
+        });
+
         panelCentral.add(new JLabel("Alias:"));
         panelCentral.add(textFieldAlias);
         panelCentral.add(new JLabel("Correo Electrónico:"));
@@ -64,6 +78,7 @@ public class VentanaPrincipal extends JFrame {
         panelCentral.add(btnPublicarTuit);
         panelCentral.add(new JLabel("Seleccionar Usuario:"));
         panelCentral.add(comboBoxUsuarios);
+        panelCentral.add(labelCaracteresRestantes);
 
         add(panelCentral, BorderLayout.CENTER);
         add(scrollPane, BorderLayout.SOUTH);
