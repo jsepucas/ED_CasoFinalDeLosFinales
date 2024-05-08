@@ -18,3 +18,9 @@ public class CodigoCorregido {
         }
     }
 }
+
+// El código está diseñado para calcular la potencia de un número a elevado a b, es
+//decir, a^b. Utiliza un método recursivo simple, donde la función se llama a sí misma
+//hasta alcanzar un caso base. El caso base ocurre cuando b es cero, donde por
+//definición matemática, cualquier número elevado a cero es uno. Si a es cero y b
+//es cero, el resultado es uno, según la convención matemática.
