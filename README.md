@@ -12,6 +12,9 @@ Este documento contiene una serie de ejercicios y preguntas relacionadas con la 
 - [Ejercicio 1: Preguntas de selección](#ejercicio-1)
 - [Ejercicio 2](#ejercicio-2)
 - [Ejercicio 3](#ejercicio-3)
+- [Ejercicio 4](#ejercicio-4)
+- [Ejercicio 5](#ejercicio-5)
+- [Final](#final)
 
 ## Ejercicio 1
 
@@ -44,26 +47,36 @@ Este documento contiene una serie de ejercicios y preguntas relacionadas con la 
 
 ## Ejercicio 2
 
-La mejor opción sería la tercera alternativa, especialmente para dispositivos que tienen muy poca memoria, como los que estamos considerando. Esta opción balancea bien el uso del tiempo y del espacio, algo crucial para gestionar los recursos de manera eficaz en aplicaciones de telemedicina, donde contar con un buen rendimiento y ser eficiente es vital.
+Creo que la mejor opción sería la tercera alternativa (c) , especialmente para dispositivos que tienen muy poca memoria, como los que estamos considerando. Esta opción balancea bien el uso del tiempo y del espacio, algo crucial para gestionar los recursos de manera eficaz en aplicaciones de telemedicina, donde contar con un buen rendimiento y ser eficiente es vital.
 
 ## Ejercicio 3
 
-Este ejercicio ha sido realizado y el código correspondiente se encuentra en el repositorio.
+Este ejercicio ha sido realizado y el código correspondiente junto a su explicación se encuentra en el repositorio.
 
 
 
 
+## Ejercicio 4 
+
+Este ejercicio ha sido realizado y el código correspondiente junto a su explicacion se encuentra en el repositorio.
 
 
-# Explicacion de distintos ejercicios realizados en el Ejercicio 5 (Modificar ) 
+## Ejercicio 5
+
+Explicacion de distintos ejercicios realizados en el Ejercicio 5 (Modificar ) 
 
 Justificación de la Elección de las Estructuras de Datos
-Aquí están las justificaciones que puedes incluir en el README:
 
 List<Tweet> para tweets y timeline: Se utilizó una lista porque mantiene el orden de los tweets tal como fueron publicados. Esto es importante para mostrar los tweets en un timeline cronológico.
 Set<UserAccount> para seguidores y siguiendo: Se eligió un conjunto para evitar duplicidades, dado que un usuario no debería poder seguir a otro más de una vez ni tener el mismo seguidor múltiples veces.
+
 Validaciones en el constructor: Aseguran que el email tenga un formato correcto y que el alias sólo contenga caracteres válidos al momento de crear una UserAccount. Esto previene errores en el manejo de datos y facilita la gestión de usuarios en el sistema.
 Herencia en clases Tweet: Utilizando herencia entre Tweet, DirectMessage, y Retweet, se aprovecha la reutilización de código y se maneja de manera eficiente las diferencias y similitudes entre los tipos de tweets.
 Este diseño proporciona un sistema robusto y extensible que refleja las funcionalidades básicas y estructuras de datos necesarias para simular un comportamiento similar al de Twitter.
 
+----------------------------------------------------------------------------------------------------------------------------------
+
+## Final
+
+Este proyecto contiene 6 carpetas nombradas alfabeticamente y una clase llamada 'MainGUI' en la cual se ejecuta el ejercicio 5. También contiene los ejercicios 3 y 4 los cuales estan hechos y detallados a base de comentarios donde se realiza la explicación adecuada de cada uno. 
 
