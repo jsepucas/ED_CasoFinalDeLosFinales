@@ -27,8 +27,29 @@ public class VentanaPrincipal extends JFrame {
         setLayout(new BorderLayout());
         setLocationRelativeTo(null);
 
+        // Establecer el look and feel a Nimbus
+        try {
+            for (UIManager.LookAndFeelInfo info : UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
         todosLosUsuarios = new ArrayList<>();
         initUIComponents();
+
+        // Añadir espaciado alrededor de los componentes
+        ((JComponent) getContentPane()).setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
+
+        // Cambiar la fuente de los componentes
+        Font font = new Font("Arial", Font.PLAIN, 14);
+        for (Component component : getContentPane().getComponents()) {
+            component.setFont(font);
+        }
     }
 
     private void initUIComponents() {
