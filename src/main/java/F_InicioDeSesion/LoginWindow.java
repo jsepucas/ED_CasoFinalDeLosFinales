@@ -22,7 +22,7 @@ public class LoginWindow extends JFrame implements ActionListener {
         this.setLocationRelativeTo(null); // Centra la ventana en pantalla
 
         // Configura el panel principal con una imagen de fondo
-        URL fondoUrl = getClass().getResource("/images/Twitter.jpg");
+        URL fondoUrl = getClass().getResource("/images/fon.jpg");
         if (fondoUrl != null) {
             ImageIcon fondo = new ImageIcon(fondoUrl);
             JLabel labelFondo = new JLabel(fondo);
@@ -33,7 +33,6 @@ public class LoginWindow extends JFrame implements ActionListener {
             // Configura un color de fondo como fallback
             this.getContentPane().setBackground(Color.GRAY);
         }
-
 
         // Panel de entrada de datos
         JPanel panelCentral = new JPanel(new GridBagLayout());
@@ -95,6 +94,22 @@ public class LoginWindow extends JFrame implements ActionListener {
         panelCentral.add(botonIniciarSesion, c);
         botonIniciarSesion.addActionListener(this);
 
+        // Añade el logo de la empresa
+        URL logoUrl = getClass().getResource("/images/UAX2.png");
+        if (logoUrl != null) {
+            ImageIcon logo = new ImageIcon(logoUrl);
+
+            // Ajusta el tamaño de la imagen del logo
+            Image imagen = logo.getImage();
+            Image imagenRedimensionada = imagen.getScaledInstance(125, 68, java.awt.Image.SCALE_SMOOTH);
+            logo = new ImageIcon(imagenRedimensionada);
+
+            JLabel labelLogo = new JLabel(logo);
+            c.gridy++;
+            panelCentral.add(labelLogo, c);
+        } else {
+            System.err.println("No se pudo cargar el logo de la empresa");
+        }
         // Añade el panel al fondo
         this.add(panelCentral, BorderLayout.CENTER);
     }
