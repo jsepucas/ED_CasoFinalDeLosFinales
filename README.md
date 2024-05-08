@@ -44,7 +44,7 @@ Este documento contiene una serie de ejercicios y preguntas relacionadas con la 
 
 ## Ejercicio 2
 
-La mejor opción sería la tercera alternativa, especialmente para dispositivos que tienen muy poca memoria, como los que estamos considerando. Esta opción balancea bien el uso del tiempo y del espacio, algo crucial para gestionar los recursos de manera eficaz en aplicaciones de telemedicina, donde contar con un buen rendimiento y ser eficiente es vital.
+Creo que la mejor opción sería la tercera alternativa (c) , especialmente para dispositivos que tienen muy poca memoria, como los que estamos considerando. Esta opción balancea bien el uso del tiempo y del espacio, algo crucial para gestionar los recursos de manera eficaz en aplicaciones de telemedicina, donde contar con un buen rendimiento y ser eficiente es vital.
 
 ## Ejercicio 3
 
@@ -53,12 +53,13 @@ Este ejercicio ha sido realizado y el código correspondiente se encuentra en el
 
 
 
+## Ejercicio 4 
+
 
 
 # Explicacion de distintos ejercicios realizados en el Ejercicio 5 (Modificar ) 
 
 Justificación de la Elección de las Estructuras de Datos
-Aquí están las justificaciones que puedes incluir en el README:
 
 List<Tweet> para tweets y timeline: Se utilizó una lista porque mantiene el orden de los tweets tal como fueron publicados. Esto es importante para mostrar los tweets en un timeline cronológico.
 Set<UserAccount> para seguidores y siguiendo: Se eligió un conjunto para evitar duplicidades, dado que un usuario no debería poder seguir a otro más de una vez ni tener el mismo seguidor múltiples veces.
